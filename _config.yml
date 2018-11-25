@@ -1,12 +1,12 @@
-title: Sciency
+title: C'est ça
 author: Atul Singh Arora (editor)
 email: atul.singh.arora@ulb.ac.be
 description: > # this means to ignore newlines until "twitter_username:"
-  Sciency is intended to be a peer-reviewed journal of popular science articles written in at least two languages.
+  "C'est ça" is intended to be a peer-reviewed journal of popular science articles written in at least two languages.
 
 # social links
 #twitter_username: jekyllrb
-github_username:  Sciency
+github_username:  C-est-ca
 #rss: rss
 # dribbble_username: jekyll
 # facebook_username: jekyll
