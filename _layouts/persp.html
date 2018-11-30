@@ -3,16 +3,53 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    [perspective] <h1 class="post-title p-name" itemprop="name headline"> {{ page.title | escape }}</h1>
+  <header class="post-header">    
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+    </p>
+    [perspective]
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }} <p></p> <small>{{page.titleAlt | escape}}</small> </h1>    
+    <p class="post-meta">
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}
+
+        
+      {%- assign authorCount = page.authors | size -%}
+      {%- if authorCount == 0 -%}
+      {%- elsif authorCount == 1 -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.authors | first }} <br/> <sub>{{page.affs | first }}</sub> </span></span>
+      {%- else -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">
+          {%- for author in page.authors -%}
+              {%- if forloop.first -%}
+                  {{ author }}<sup>{{forloop.index}}</sup>
+              {%- elsif forloop.last -%}
+                  &nbsp;and {{ author }}<sup>{{forloop.index}}</sup>
+              {%- else -%}
+                  , {{ author }}<sup>{{forloop.index}}</sup>
+              {%- endif -%}
+          {%- endfor -%}            
+        </span></span>
+        <br/>
+        {%- for aff in page.affs -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">
+          {%- if forloop.first -%}
+            <sup>{{ forloop.index }}</sup><sub>{{aff}}             </sub>
+          {%- elsif forloop.last -%}
+            <sub>, </sub><sup>{{ forloop.index }}</sup><sub>{{aff}} </sub>
+          {%- else -%}
+            <sub>, </sub><sup>{{ forloop.index }}</sup><sub>{{aff}} </sub>
+          {%- endif -%}
+        </span></span>          
+          
+        {%- endfor -%}
+      {%- endif -%}
+
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

@@ -1,8 +1,15 @@
 ---
 layout: persp
 title: "Large Number"
+titleAlt: "विशाल अंक"
 categories: perspective
-author: "Atul Singh Arora and Bharti Yadav"
+authors: 
+- "Atul Singh Arora"
+- "Bharti Yadav"
+affs: 
+- "Université libre de Bruxelles (Belgium)"
+- "Leibniz-Institut für Polymerforschung Dresden (Germany)"
+
 meta: "Perspective"
 ---
 
