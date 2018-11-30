@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fragrance of the Earth"
-titleAlt: "मिट्टी की खुश्बू"
+titleAlt: "मिट्टी की खुशबू"
 categories: post
 authors: 
 - "Vivek Sagar — विवेक सागर"
