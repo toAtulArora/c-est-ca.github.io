@@ -6,7 +6,7 @@ categories: post
 authors: 
 - "Vivek Sagar — विवेक सागर"
 affs: 
-- "Department of Neuroscience, Northwestern University (USA) — तंत्रिकाविज्ञान विभाग, नॉर्थवेस्टर्न यूनिवर्सिटी (संयुक्त राज्य अमेरिका)"
+- "Department of Neurology, Northwestern University (USA) — तंत्रिकाविज्ञान विभाग, नॉर्थवेस्टर्न यूनिवर्सिटी (संयुक्त राज्य अमेरिका)"
 meta: "Post"
 ---
 
