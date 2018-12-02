@@ -183,6 +183,14 @@ table {
     border: 1px solid #e8e8e8; }
 
 /**
+ * Bibliography
+*/
+.bibliography {
+  list-style: none;
+  color: gray;
+  font-size: small; }
+
+/**
  * Site header
  */
 .site-header {
