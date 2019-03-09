@@ -2,3 +2,5 @@ git subtree push --prefix _site origin gh-pages
 
 bundle exec jekyll serve
 bundle install
+
+exec ssh-agent bash
