@@ -16,7 +16,7 @@ layout: default
       {%- if page.author -%}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}
-
+      
         
       {%- assign authorCount = page.authors | size -%}
       {%- if authorCount == 0 -%}
@@ -52,7 +52,26 @@ layout: default
     </p>
   </header>
 
+
+
   <div class="post-content e-content" itemprop="articleBody">
+    
+    {%- if page.videoEN and page.videoLC -%}
+      <iframe align="left" width="50%" height="300" src="{{ page.videoEN }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe align="right" width="50%" height="300" src="{{ page.videoEN }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      &emsp;
+      <p></p>      
+      <p></p>
+
+
+    {%- elsif page.videoEN -%}  
+      <iframe align="center" width="100%" height="300" src="{{ page.videoEN }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      &emsp;
+      <p></p>      
+      <p></p>
+
+    {%- endif -%}
+    
     {{ content }}
   </div>
 
