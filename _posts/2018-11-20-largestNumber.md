@@ -1,7 +1,7 @@
 ---
 layout: persp
 title: "A Large Number"
-titleAlt: "एक विशाल अंक"
+titleAlt: "एक विशाल संख्या"
 categories: perspective
 authors: 
 - "Atul Singh Arora"
