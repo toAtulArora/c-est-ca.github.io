@@ -8,8 +8,14 @@ exec ssh-agent bash
 
 
 
+Before Updating:
+Comment out the line 
+baseurl:/...
+in _config.yml
+
 To update the actual website, simply copy paste the contents of _site into the c-est-ca folder (in sparkleshare)
-TODO: Find a way of updating this directly through the git pull;
+
+TODO: Find a way of updating this directly through git pull;
 NB. in c-est-ca there's just one branch, called master
 in c-est-ca_local, there're two branches; the master and the gh-pages
 I have to merge the gh-pages branch with c-est-ca's master branch.
